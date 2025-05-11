@@ -23,9 +23,17 @@
       text-align: center;
       padding: 3rem 1rem;
     }
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #ffc107;
+    }
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.3rem;
     }
     header p {
       font-size: 1.1rem;
@@ -58,27 +66,53 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .skill-box {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      font-weight: 500;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-tile {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease-in-out;
+      text-align: center;
+    }
+    .project-tile:hover {
+      transform: translateY(-5px);
+    }
+    .project-tile img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
+    }
+    .project-tile a {
+      color: #007bff;
+      font-weight: 500;
+      text-decoration: none;
+    }
     .card {
       background: #fff;
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       margin-bottom: 1.5rem;
-      transition: transform 0.2s ease-in-out;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h3 {
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      margin-bottom: 0.5rem;
-    }
-    .card a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: 500;
     }
     footer {
       text-align: center;
@@ -90,58 +124,77 @@
 </head>
 <body>
   <header>
+    <img src="LinkedInPP.jpg" alt="Uday Kumar Profile Picture">
     <h1>Uday Kumar</h1>
-    <p>Data Scientist | Civil & Environmental Engineering | Machine Learning Enthusiast</p>
+    <p>Data Scientist | Civil & Environmental Engineer | Machine Learning Enthusiast</p>
   </header>
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#education">Education</a>
+    <a href="#certification">Certification</a>
     <a href="#internships">Internships</a>
   </nav>
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>I’m a data-driven problem solver with a civil engineering background and hands-on experience in Python, SQL, MATLAB, and Power BI. I enjoy combining analytical techniques with engineering intuition to build models that matter.</p>
+      <p>I am a data-focused professional with an engineering foundation, skilled in Python, SQL, and MATLAB. My interests lie in turning raw data into actionable solutions using analytics and machine learning models.</p>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <div class="card">
-        <p><strong>Languages:</strong> Python, SQL, MATLAB</p>
-        <p><strong>Libraries:</strong> Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, SHAP</p>
-        <p><strong>Tools:</strong> Power BI, Tableau, Excel, Jupyter Notebook, Google Colab, MATLAB Neural Network Toolbox</p>
-        <p><strong>Techniques:</strong> Classification, Regression, Time Series (ARIMA, Prophet), CART, ANN, CNN</p>
+      <div class="skills-grid">
+        <div class="skill-box">Python</div>
+        <div class="skill-box">SQL</div>
+        <div class="skill-box">MATLAB</div>
+        <div class="skill-box">Pandas / NumPy</div>
+        <div class="skill-box">scikit-learn / SHAP</div>
+        <div class="skill-box">Tableau / Power BI</div>
+        <div class="skill-box">ARIMA / Prophet</div>
+        <div class="skill-box">ANN / CNN / CART</div>
       </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="card">
-        <h3>Air Pollution Dispersion Prediction (MATLAB)</h3>
-        <p>Built ANN, CNN, and CART models to predict SOx, NOx, PM10 levels in Ranchi using environmental data.</p>
-        <a href="https://github.com/UdayKumar75/Academic-Project" target="_blank">View Project</a>
-      </div>
-      <div class="card">
-        <h3>Customer Churn Prediction</h3>
-        <p>Used Random Forest & SHAP to detect churn-prone customers with 87% accuracy.</p>
-        <a href="https://github.com/UdayKumar75/Customer_Churn" target="_blank">View Project</a>
-      </div>
-      <div class="card">
-        <h3>Sales Forecasting</h3>
-        <p>Retail sales prediction using ARIMA & Prophet. Dashboard built in Tableau.</p>
-        <a href="https://github.com/UdayKumar75/Sales-Forcasting" target="_blank">View Project</a>
-      </div>
-      <div class="card">
-        <h3>Power BI Survey Dashboard</h3>
-        <p>Visualized job satisfaction metrics of 1000+ professionals using Power BI.</p>
-        <a href="https://github.com/UdayKumar75/Data-Professional-Survey" target="_blank">View Dashboard</a>
-      </div>
-      <div class="card">
-        <h3>SQL Data Cleaning</h3>
-        <p>Transformed unclean housing data using SQL queries and CTEs.</p>
-        <a href="https://github.com/UdayKumar75/SQL-Data-Cleaning-Project" target="_blank">View Code</a>
+      <div class="project-grid">
+        <div class="project-tile">
+          <img src="https://source.unsplash.com/featured/?pollution" alt="Pollution ML Project">
+          <h3>Air Pollution Dispersion</h3>
+          <p>Forecasted pollutant spread using ANN, CNN, and CART in MATLAB</p>
+          <a href="https://github.com/UdayKumar75/Academic-Project" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile">
+          <img src="https://source.unsplash.com/featured/?customer" alt="Churn Analysis">
+          <h3>Customer Churn Prediction</h3>
+          <p>Predicted customer attrition using Random Forest & SHAP</p>
+          <a href="https://github.com/UdayKumar75/Customer_Churn" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile">
+          <img src="https://source.unsplash.com/featured/?sales" alt="Sales Forecasting">
+          <h3>Sales Forecasting</h3>
+          <p>Built time series model to predict weekly retail sales</p>
+          <a href="https://github.com/UdayKumar75/Sales-Forcasting" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile">
+          <img src="https://source.unsplash.com/featured/?dashboard" alt="Power BI Dashboard">
+          <h3>Power BI Survey Dashboard</h3>
+          <p>Interactive visual insights from 1000+ tech professionals</p>
+          <a href="https://github.com/UdayKumar75/Data-Professional-Survey" target="_blank">View Dashboard</a>
+        </div>
+        <div class="project-tile">
+          <img src="https://source.unsplash.com/featured/?movies" alt="Movies Correlation">
+          <h3>Movies Correlation Analysis</h3>
+          <p>Analyzed factors affecting movie success using Python</p>
+          <a href="https://github.com/UdayKumar75/Movies-Correlation-Project" target="_blank">View Notebook</a>
+        </div>
+        <div class="project-tile">
+          <img src="https://source.unsplash.com/featured/?sql" alt="SQL Cleaning">
+          <h3>SQL Data Cleaning</h3>
+          <p>Cleaned and transformed messy housing data using SQL</p>
+          <a href="https://github.com/UdayKumar75/SQL-Data-Cleaning-Project" target="_blank">View Code</a>
+        </div>
       </div>
     </section>
 
@@ -153,12 +206,20 @@
       </div>
     </section>
 
+    <section id="certification">
+      <h2>Certification</h2>
+      <div class="card" style="text-align:center;">
+        <img src="Teachnook_Data_Science.jpg" alt="Teachnook Data Science Certificate" style="width:100%; max-width:600px; border-radius:10px;">
+        <p><strong>Data Science Course – Teachnook & Wissenaire IIT Bhubaneswar</strong></p>
+        <p>Completed from 01/09/2022 to 31/10/2022</p>
+      </div>
+    </section>
+
     <section id="internships">
       <h2>Internships</h2>
       <div class="card">
-        <p><strong>Accenture (Forage)</strong> – Created client insights using multiple datasets</p>
-        <p><strong>Quantium (Forage)</strong> – Analyzed consumer behavior and retail trends</p>
-        <p><strong>NHAI Ranchi</strong> – Participated in site surveying and bridge alignment projects</p>
+        <p><strong>NHAI Ranchi – June 2024</strong></p>
+        <p>Conducted site surveys and supported bridge alignment and supervision activities</p>
       </div>
     </section>
   </main>
